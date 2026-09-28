@@ -1,0 +1,185 @@
+:root{
+  --bg:#071427;
+  --muted:#98a0b3;
+  --glass:rgba(255,255,255,0.06);
+  font-family:system-ui,Arial;
+}
+
+body{
+  margin:0;
+  background:linear-gradient(180deg,#041223,#071427);
+  color:#e6eef6;
+  padding:18px;
+}
+
+.app{max-width:1100px;margin:auto}
+
+/* HEADER */
+header{
+  text-align:center;
+  margin-bottom:16px;
+}
+
+.controls{
+  display:flex;
+  gap:10px;
+  justify-content:center;
+}
+
+input,button{
+  padding:8px 12px;
+  border-radius:8px;
+  border:none;
+  background:var(--glass);
+  color:white;
+}
+
+/* LAYOUT */
+main{display:flex;gap:12px}
+.left{flex:1}
+.right{width:340px}
+
+/* GRID */
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fill,minmax(220px,1fr));
+  gap:12px;
+}
+
+.card{
+  background:rgba(255,255,255,0.05);
+  border-radius:12px;
+  overflow:hidden;
+}
+
+.thumb{
+  width:100%;
+  height:140px;
+  object-fit:cover;
+}
+
+.card-body{padding:10px}
+
+.small-btn{
+  background:rgba(255,255,255,0.08);
+  border:none;
+  border-radius:8px;
+  padding:6px 10px;
+  color:white;
+  cursor:pointer;
+}
+
+/* QUICK SEARCH */
+.quick-grid{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:10px;
+}
+
+.quick-card{
+  padding:10px;
+  text-align:center;
+}
+
+/* PANEL */
+.panel{
+  background:rgba(255,255,255,0.04);
+  padding:12px;
+  border-radius:10px;
+}
+
+/* MODAL */
+.modal{
+  position:fixed;
+  inset:0;
+  background:rgba(0,0,0,0.7);
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  z-index:50;
+}
+
+.modal-content{
+  background:#071427;
+  padding:18px;
+  border-radius:12px;
+  max-width:900px;
+  width:95%;
+}
+
+.modal-body{
+  display:flex;
+  gap:16px;
+  flex-wrap:wrap;
+}
+
+.modal-left{
+  flex:1 1 320px;
+}
+
+.modal-left img{
+  width:100%;
+  max-height:340px;
+  object-fit:cover;
+  border-radius:12px;
+}
+
+.modal-right{
+  flex:1 1 360px;
+  max-height:65vh;
+  overflow-y:auto;
+}
+
+.instructions{
+  white-space:pre-wrap;
+  line-height:1.5;
+}
+
+.ingredients li{
+  margin-bottom:6px;
+}
+
+.close{
+  float:right;
+  background:none;
+  border:none;
+  color:white;
+  font-size:18px;
+  cursor:pointer;
+}
+
+/* FOOTER */
+.footer{
+  margin-top:18px;
+  text-align:center;
+  color:var(--muted);
+}
+
+@media(max-width:900px){
+  main{flex-direction:column}
+  .right{width:100%}
+}
+
+/* YouTube recipe links */
+.youtube-btn{
+  display:inline-block;
+  background:#ff0000;
+  color:#fff;
+  text-decoration:none;
+  border-radius:8px;
+  padding:6px 10px;
+  font-size:14px;
+  font-weight:600;
+  cursor:pointer;
+}
+.youtube-btn:hover{
+  background:#cc0000;
+  color:#fff;
+}
+.card-youtube{
+  margin-left:6px;
+}
+.modal-youtube{
+  margin-top:12px;
+  padding:10px 14px;
+}
